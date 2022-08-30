@@ -17,8 +17,5 @@ def get_menu():
 	m = kssbmenu.kssb_menu()
 	return jsonify(m.download())
 
-@app.errorhandler(404)
-def not_found():
-	return "Error: Page not found!\n\nPlease insure the URL is correct."
 
 app.run()

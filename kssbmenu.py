@@ -1,4 +1,4 @@
-import requests
+import requests, time
 from bs4 import BeautifulSoup
 
 class kssb_menu():
@@ -23,4 +23,5 @@ class kssb_menu():
 		for i in range(len(days)):
 			menu[days[i]] = menus[i]
 		
+		menu["last_update"] = time.time()
 		return menu

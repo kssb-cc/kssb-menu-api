@@ -12,10 +12,10 @@ You can check out the <a href="https://kssb.net/parents/menus">KSSB Menu on the 
 	"""
 
 
-@app.route("/api/get")
+@app.route("/api/get_raw")
 def get_menu():
 	m = kssbmenu.kssb_menu()
-	return jsonify(m.download())
+	return m.download()
 
 
 app.run()

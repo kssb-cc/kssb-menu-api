@@ -9,7 +9,7 @@ def home():
 	return render_template("index.html")
 
 @app.route("/api/get_raw")
-def get_menu():
+def get_raw():
 	return m.download()
 
 @app.route("/api/get")

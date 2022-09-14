@@ -1,16 +1,11 @@
 import flask, kssbmenu
-from flask import request, jsonify
+from flask import render_template, request
 
 app = flask.Flask(__name__)
 
 @app.route("/")
 def home():
-	return """
-<h1>Error</h1>
-<p>Unfortunately, it isn't possible to access this API this way.<br>
-You can check out the <a href="https://kssb.net/parents/menus">KSSB Menu on the main site</a>, though.</p>
-	"""
-
+	return render_template("index.html")
 
 @app.route("/api/get_raw")
 def get_menu():

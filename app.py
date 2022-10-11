@@ -1,5 +1,5 @@
 import flask, kssbmenu
-from flask import render_template, request
+from flask import render_template, request, jsonify
 
 m = kssbmenu.kssb_menu()
 app = flask.Flask(__name__)
@@ -10,7 +10,7 @@ def home():
 
 @app.route("/api/get_raw")
 def get_raw():
-	return m.download()
+	return jsonify(m.download())
 
 @app.route("/api/get")
 def get():

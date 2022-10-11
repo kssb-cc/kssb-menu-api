@@ -20,4 +20,4 @@ def get():
 	if day == "" or day not in tempmenu: return "Wrong day"
 	return str(tempmenu[day])
 
-app.run(host = "0.0.0.0")
+app.run(host = "0.0.0.0", port = 5300)

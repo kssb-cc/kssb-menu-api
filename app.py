@@ -1,4 +1,4 @@
-import flask, kssbmenu
+import flask, kssbmenu, sys
 from flask import render_template, request, jsonify
 
 m = kssbmenu.kssb_menu()
@@ -20,4 +20,4 @@ def get():
 	if day == "" or day not in tempmenu: return "Wrong day"
 	return str(tempmenu[day])
 
-app.run(host = "0.0.0.0", port = 5300)
+app.run(host = "0.0.0.0", port = (5300 if len(sys.argv) <2 else sys.argv[1]))

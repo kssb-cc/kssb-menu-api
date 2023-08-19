@@ -1,7 +1,7 @@
-import flask, kssbmenu, sys
+import flask, kssb_menu, sys
 from flask import render_template, request, jsonify
 
-m = kssbmenu.kssb_menu()
+m = kssb_menu.KssbMenu()
 app = flask.Flask(__name__)
 
 @app.route("/")
